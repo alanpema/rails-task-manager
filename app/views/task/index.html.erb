@@ -1,0 +1,9 @@
+<h1 class="text-dark">MY tasks</h1>
+
+<ul class="list-group">
+  <% @tasks.each do |task| %>
+    <li class="list-group-item list-group-item-action list-group-item-secondary border border-info border-5 rounded-pill" aria-current="true"><%= link_to task.title, task_path(task), class:"text-decoration-none text-black"%></li>
+  <% end %>
+</ul>
+
+<h2 type="button" class="btn btn-danger btn-sm m-3" ><%=link_to "Create Task", tasks_new_path,  class:"text-decoration-none text-white"%></h2>
